@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+body {
+	margin: 0;
+	background:#111;
+
+	animation: background 20s linear alternate infinite;
+}
+h1 {
+	font-family: Open Sans, sans-serif;
+	font-size: 200%;
+	font-weight: 200;
+	text-align: center;
+	color: #CCC;
+	position: absolute;
+	top: calc(50% - 100px);
+	left: calc(50% - 9em);
+	letter-spacing: 1em;
+	text-transform: uppercase;
+}
+
+p {
+	position: absolute;
+	top: calc(50% - 36px);
+	color: rgba(225, 225, 225, .8);
+	font-family: Open Sans, sans-serif;
+	text-transform: uppercase;
+	left: calc(50% - 16em);
+	letter-spacing: 0.5em;
+}
+
+@keyframes background {
+	0% {
+		background: #111;
+	}
+	20% {
+		background: #F44336;
+	}
+	40% {
+		background: #FF5722;
+	}
+	60% {
+		background: #8BC34A;
+	}
+	80% {
+		background: #03A9F4;
+	}
+	100% {
+		background: #673AB7;
+	}
+}
+
+div.buttons {
+	position: absolute;
+	top: calc(50% + 120px);
+	width: 100vw;
+	text-align: center;
+}
+
+div.buttons > div {
+	display: inline-block;	
+	margin-right: 30px;
+}
+
+div.pump {
+	transition: all 50ms ease-out;
+}
+
+div.pump button {
+	height: 50px;
+	width: 50px;
+	font-size: 0;
+	border-radius: 25px;
+	border: 0;
+	background: rgba(21, 21, 21, .6);
+	color: #AAA;
+	font-family: Roboto, sans-serif;
+	text-transform: uppercase;
+	font-weight: 200;
+	text-indent: 20px;
+	box-shadow: 0 2px 5px 1px #212121;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+
+	transition: all 50ms ease-out;
+}
+
+div.pump button:after{
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-left: -10px;
+	position: absolute;
+	top: calc(50% - 15px);
+	left: calc(50% - 5px);
+	transition: all 50ms ease-out;
+}
+
+div.pump.basic button {
+	background: rgba(21, 21, 21, .6);
+	color: #AAA;
+	box-shadow: 0 2px 5px 1px #212121;	
+}
+
+div.pump.basic.nclick button:after {
+	background: url('https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_play_arrow_white_24px.svg') no-repeat center;
+}
+
+div.pump.success button {
+	background: rgba(27,94,32, .8);
+	color: #FFF;
+	box-shadow: 0px 2px 5px 1px #212121;
+}
+
+div.pump.success.nclick button:after {
+	background: url('https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_done_white_24px.svg') no-repeat center;
+}
+
+div.pump.error button {
+	background: rgba(183,28,28, .8);
+	color: #FFF;
+	box-shadow: 0px 2px 5px 1px #212121;
+}
+
+div.pump.error.nclick button:after {
+	background: url('https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_highlight_off_white_24px.svg') no-repeat center;
+}
+
+div.pump.prompt button {
+	background: rgba(48,79,254, .8);
+	color: #FFF;
+	box-shadow: 0px 2px 5px 1px #212121;
+}
+
+div.pump.prompt.nclick button:after {
+	background: url('https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_get_app_white_24px.svg') no-repeat center;
+}
+
+div.pump.nclick:hover {
+	left: calc(50% - 7em);
+}
+
+div.pump.nclick button:hover {
+	width: 200px;
+	font-size: 12px;
+}
+
+div.pump.nclick button:hover:after {
+	left: 30px;
+}
+
+div.pump.click button:after {
+	background: url('https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_cached_white_24px.svg') no-repeat center;
+	animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>Hello World</title>
+	<link rel="stylesheet" type="text/css" href="style/buttons.css">
+	<script>
+		var item;
+		function changeStatus(ele) {
+			item = ele;
+			if(ele.className.match(/\bnclick\b/)) {
+				ele.className = ele.className.replace(/\bnclick\b/, "click");
+			} else {
+				ele.className = ele.className.replace(/\bclick\b/, "nclick");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<h1>CSS Buttons</h1>
+	<p>Beautiful and Elegant Design</p>
+
+	<div class="buttons">
+		<div class="pump basic nclick" onclick="changeStatus(this)">
+			<button>Watch tutorial</button>
+		</div>
+		<div class="pump success nclick" onclick="changeStatus(this)">
+			<button>Done</button>
+		</div>
+		<div class="pump error nclick" onclick="changeStatus(this)">
+			<button>Failed</button>
+		</div>
+		<div class="pump prompt nclick" onclick="changeStatus(this)">
+			<button>Download</button>
+		</div>
+	</div>
+</body>
+
+</html>
